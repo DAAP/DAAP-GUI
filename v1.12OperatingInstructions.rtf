@@ -1,0 +1,180 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fnil\fcharset0 Consolas;
+\f3\fnil\fcharset0 Consolas-Bold;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red31\green31\blue31;\red255\green255\blue255;\red38\green38\blue38;
+\red49\green49\blue49;\red242\green242\blue242;\red83\green83\blue83;\red221\green32\blue103;}
+{\*\expandedcolortbl;;\cssrgb\c16471\c16471\c16471;\cssrgb\c100000\c100000\c100000;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c25098\c25098\c25098;\cssrgb\c96078\c96078\c96078;\cssrgb\c40000\c40000\c40000;\cssrgb\c90234\c23206\c47866;}
+\margl1440\margr1440\vieww14940\viewh18540\viewkind1
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs28 \cf0 INSTALLATION
+\fs24 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 DAAP is written in the computer language, 'python', and needs the python interpreter, as well as some auxiliary python programs.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+1. On the web, go to www.python.org/downloads/, and download python 3.6.5. NOTE:  your computer possibly has some version of python already loaded, but you need python 3.6.5. or later.\
+\
+2. Open a terminal window. On a Mac, you can find the Terminal at: \
+Applications/Utilities/Terminal.app. \
+On a windows computer, you should find the terminal at\
+path 
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+C:\\Windows\\System32\\cmd.exe
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+	\
+3. In the terminal window, type (or copy and paste):\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf4 \cb3 \expnd0\expndtw0\kerning0
+pip\cf5  \cf4 install\cf5  
+\f3\b -
+\f2\b0 \cf4 U\cf5  \cf4 pip\
+(pip is the python package installation program, and this updates it.)\
+\
+4. In the terminal window, type (or copy and paste):\
+
+\f4 \cb6 python3 \cf7 -\cf4 m pip install \cf7 --\cf4 user numpy matplotlib pandas 
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+(For some computers, the above might not work; in this case, try typing:\
+
+\f4 \cf4 \cb6 \expnd0\expndtw0\kerning0
+python \cf7 -\cf4 m pip install \cf7 --\cf4 user numpy matplotlib pandas )\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+You should see a messages saying that numpy, matplotlib and pandas have been successfully downloaded; these are the auxilliary python programs needed by DAAP.\
+\
+5. Close the terminal window.\
+\
+6. Make a new Folder in some convenient location and name it DAAP.\
+\
+Copy the contents of the DAAP distribution into this DAAP folder (These contents should include the programs, DAAP-v1.12.py and DAAPDefs.py, and the folders, __pycache__ and DicStore; you might also want to copy this file: 'v1.12OperatingInstructions.rtf)\
+\
+\
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs28 \cf0 TEXT PREPARATION
+\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+(These instructions are for psychotherapy transcripts; there are other special instructions for interviews.)\
+\
+1. 
+\b Speaker Identifiers
+\b0 . Each turn of speech must start on a new line. Patient speech starts with \
+\\s 1 \
+or \
+>s 1 \
+\
+and therapist speech starts with \
+\\s 2\
+or \
+>s 2 \
+(Note the spaces after the numbers).\
+\
+Do not use the backslash or right angle bracket for any other purpose.\
+\
+if, as often happens, two successive turns of speech are identified as belonging to the same speaker, the speaker identifiers appear in the Error Correction (EC) file as \
+>s 1 and >s 2. \
+\
+2. 
+\b Top matter
+\b0 . DAAP does not process any material that appears before the first speaker identifier.\
+\
+3. 
+\b Parenthetical remarks
+\b0 . DAAP ignores anything in parentheses. Please use only round and square brackets for parenthetical remarks. Please do not use curly or angle brackets.\
+\
+4. 
+\b Commas, periods, etc.
+\b0  Use these as needed to record the sense of what is said.\
+\
+5. 
+\b Ordinary words
+\b0 . Generally speaking, put what is heard into reasonable written English. Do not try to transcribe dialect or special accents. \
+\
+7. 
+\b End matter.
+\b0  Some files have special material, such as project identifications, at the bottom of the file; please ensure that these are enclosed in parentheses.\
+		\
+8. 
+\b Hyphens.
+\b0  Incomplete words should end with single hyphen followed by a space, as in "I saw him wa- running to ...".\
+\
+9. 
+\b Special symbols.
+\b0  If for example the speaker says "five dollars", write either "five dollars" or "5 dollars". Do not use dollar signs ($), number signs (#) or percentage signs (%).\
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs28 \cf0 \
+RUNNING DAAP
+\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+1. For each project, make a project folder inside the DAAP folder. (Please ensure that you have copies of the text files in another location, as you may need to make changes in some of these files.)\
+\
+2. Double click on the DAAP-v1.12.py file. This should open a program called IDLE, with a new window, entitled "Python 3.6.5 Shell, in which messages from the python interpreter appear. This should also open another window showing the DAAP program; this is referred to below as the Program window.\
+\
+(NOTE: There are many programs such as IDLE that can be used for running DAAP. IDLE is a part of the python package; it does not require separate installation and is relatively easy to  use. Other programs, such as 'pycharm' and 'xcode', give more control over the running of the program, but are more difficult to master.)\
+\
+3. Click on the Program window. This should introduce a set of menus in the upper left hand corner of your screen. \
+\
+4. Click on the 'Run' menu.\
+\
+5. In the 'Run' menu, click on 'Run Module'.\
+\
+6. Two new windows should open, one of them,  which we call the Process Window, says 'welcome to DAAP', and instructs you to look for the other window.  The other window contains a  navigation screen (Finder in Mac, Explorer in Windows); click on this window and navigate to your project folder.\
+\
+7. Click (not double click) on the project folder. This should introduce a new set of directions and buttons in the  DAAP window.\
+\
+8. At this point, there are two possibilities.\
+\
+	
+\fs28 A. DAAP has found problems in one or more of your texts that need to corrected before it can proceed.
+\fs24  \
+\
+The kinds of problems DAAP usually finds are:\
+	1. A parentheses has been opened but not closed.\
+	2. A parentheses has been closed but not opened.\
+	3. There are two successive turns of speech with the same speaker.\
+	4. There is a speaker or category identifier (either backslash or right angle bracket) in a location other than the beginning of a line.\
+\
+A list of these problems appears in the Process Window; you may have to scroll down in  this window to see the full list of problems. There are also a set of new files in your project folder. These files are reproductions of your original files, with problem areas written in red ink. For each original file, for example labeled, 'textfile.txt', there is a new file, labeled 'textfileEC.rtf'; we refer to these files here as EC files.(There are also other new files labeled 'textfileA.txt', that you can safely ignore; DAAP needs these file for its own purposes.) \
+\
+Please find the problem areas marked in red in the EC files, and correct them in the original text files (that is, have both the EC file and the original text file simultaneously open). As is generally the case with computer error messages, the actual error might occur in a line  above or below the one written in red. \
+\
+After making the necessary corrections to each of the original text files, save the text file and close it. At the bottom of the Process Window, there is a box labeled 'ERRORS CORRECTED', and there is a button labeled 'CONTINUE'. After you have made the corrections, first type "y" in the 'ERRORS CORRECTED' box, and then click on the 'CONTINUE' button. At this point, the DAAP program will close, and some messages will appear in part of the IDLE window; these messages can usually be ignored.\
+\
+Now repeat the process of running DAAP; that is, click on the Program Window, then click on  'Run Module' in the 'Run' menu. \
+\
+NOTE: Transcription error correcting is sometimes an iterative process; you might find that correcting one set of errors reveals another set of errors. However, it is very rare to need a third or even fourth run through this process.\
+\
+	
+\fs28 B. DAAP has not found transcription errors in your texts, and is ready to proceed.\
+
+\fs24 \
+In this case there is a different message in the Process Window, and there is a row of buttons showing the available dictionaries. Please click on those dictionaries you wish DAAP to use in processing your files. \
+\
+There is a separate set of instructions for interviews and other material that have segmentation into categories.\
+\
+After pressing the appropriate dictionary buttons, and, if necessary, the appropriate category buttons, press the 'DICTIONARIES' button at the bottom of the page, and then  press the 'CONTINUE' button. When DAAP has finished its run of these files, a new line with the prompt  \cf8 >>>\cf0   will appear in the IDLE window.\
+\
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs28 \cf0 NOTES\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 The following problems with DAAP-v1.12 are known and we hope to have them fixed in future versions. If you come across any other problems or difficulties, please report them to bmaskit@icloud.com.\
+\
+1. When it finishes processing, DAAP does not close all the windows it has opened. Some of these windows can be closed by clicking on the Program Window, then clicking on 'Close' in the File menu. They can all be closed by clicking on the IDLE window, then clicking on 'Close' in the File menu.\
+\
+2. The operator seems to be called on to click on too many buttons; for example clicking on both the 'DICTIONARIES' button and the 'CONTINUE' button in the window containing the dictionary choices. \
+\
+3. The error correcting procedure is somewhat cumbersome. It would be better if the operator could simply correct the 'EC' files, and have DAAP automatically transfer the corrections to the original text files.\
+\
+}
